@@ -1,13 +1,21 @@
-<script setup lang="ts"></script>
+<script
+  setup
+  lang="ts"
+></script>
 
 <template>
-  <div class="border-t p-4 text-sm text-muted mt-4 flex justify-center w-full">
-    <a href="https://github.com/Formwork-Studios/nuxt4-template" target="_blank" rel="noopener"
-      class="flex items-center gap-2 text-sm mx-auto">
-      <UIcon name="i-mdi-github" />
-      <span>Star on GitHub</span>
-    </a>
-  </div>
+  <footer class="w-full">
+    <!-- Full-width brand bar with responsive clamp font-size -->
+
+
+    <!-- Existing link section -->
+    <div class="w-full bg-flo-500 text-white flex justify-center items-center py-6">
+      <span
+        class="uppercase tracking-widest font-extrabold leading-none"
+        style="font-size: clamp(2rem, 10vw, 8rem);"
+      >DRAIN-FLO</span>
+    </div>
+  </footer>
 </template>
 
 <style scoped></style>

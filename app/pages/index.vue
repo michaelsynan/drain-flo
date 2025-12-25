@@ -1,11 +1,20 @@
-<script setup lang="ts"></script>
+<script
+  setup
+  lang="ts"
+></script>
 
 <template>
   <div>
-    <UContainer>
+    <main class="min-h-screen w-full">
 
       <HomeHero />
-    </UContainer>
+      <HomeServices />
+      <SharedBlogList />
+      <HomeAbout />
+      <HomeReviews />
+      <HomeCTA />
+      <HomeMap />
+    </main>
   </div>
 </template>
 

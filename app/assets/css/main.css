@@ -1,6 +1,25 @@
 @import "tailwindcss" theme(static);
 @import "@nuxt/ui";
 
+@theme static {
+  /* FLO custom color scale anchored at #1a3c83 */
+  --color-flo-50: #f2f6fd;
+  --color-flo-100: #e6eefb;
+  --color-flo-200: #c9dbf6;
+  --color-flo-300: #a4c1f0;
+  --color-flo-400: #6f9be6;
+  --color-flo-500: #1a3c83;
+  --color-flo-600: #173673;
+  --color-flo-700: #132e61;
+  --color-flo-800: #0f254e;
+  --color-flo-900: #0b1c3b;
+  --color-flo-950: #071228;
+}
+
+.flo {
+  color: var(--color-flo-500);
+}
+
 h1 {
   font-size: theme(fontSize.4xl);
   line-height: theme(lineHeight.tight);
@@ -45,4 +64,30 @@ p {
   font-size: theme(fontSize.base);
   line-height: theme(lineHeight.relaxed);
   font-weight: theme(fontWeight.normal);
+}
+
+html {
+  cursor:
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path fill="currentColor" d="M265.12 60.12a12 12 0 0 0-18.23 0C215.23 97.15 112 225.17 112 320c0 88.37 55.64 144 144 144s144-55.63 144-144c0-94.83-103.23-222.85-134.88-259.88M272 412a12 12 0 0 1-11.34-16a11.89 11.89 0 0 1 11.41-8A60.06 60.06 0 0 0 332 328.07a11.89 11.89 0 0 1 8-11.41A12 12 0 0 1 356 328a84.09 84.09 0 0 1-84 84"/></svg>')
+      16 16,
+    auto;
+}
+
+button,
+a,
+[role="button"],
+input[type="button"],
+input[type="submit"] {
+  cursor:
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path fill="white" d="M265.12 60.12a12 12 0 0 0-18.23 0C215.23 97.15 112 225.17 112 320c0 88.37 55.64 144 144 144s144-55.63 144-144c0-94.83-103.23-222.85-134.88-259.88M272 412a12 12 0 0 1-11.34-16a11.89 11.89 0 0 1 11.41-8A60.06 60.06 0 0 0 332 328.07a11.89 11.89 0 0 1 8-11.41A12 12 0 0 1 356 328a84.09 84.09 0 0 1-84 84"/></svg>')
+      16 16,
+    pointer;
+}
+
+.water-drop-icon {
+  transition: color 0.3s ease;
+}
+
+.water-drop-icon:hover {
+  color: var(--color-flo-300) !important;
 }

@@ -14,10 +14,53 @@
   --color-flo-800: #0f254e;
   --color-flo-900: #0b1c3b;
   --color-flo-950: #071228;
+
+  /* Wrench custom color scale anchored at #c33c39 */
+  --color-wrench-50: #fcf5f5;
+  --color-wrench-100: #f9eceb;
+  --color-wrench-200: #f0cece;
+  --color-wrench-300: #e7b1b0;
+  --color-wrench-400: #db8a88;
+  --color-wrench-500: #c33c39;
+  --color-wrench-600: #b03633;
+  --color-wrench-700: #922d2b;
+  --color-wrench-800: #752422;
+  --color-wrench-900: #581b1a;
+  --color-wrench-950: #3b1211;
+
+  /* Drain custom color scale anchored at #e5bb33 */
+  --color-drain-50: #fdfaef;
+  --color-drain-100: #fbf5e0;
+  --color-drain-200: #f7ebc2;
+  --color-drain-300: #f3e0a3;
+  --color-drain-400: #eed37a;
+  --color-drain-500: #e5bb33;
+  --color-drain-600: #dab230;
+  --color-drain-700: #caa52d;
+  --color-drain-800: #b79629;
+  --color-drain-900: #a08324;
+  --color-drain-950: #89701f;
 }
 
 .flo {
   color: var(--color-flo-500);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Geom", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+p {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
 h1 {
@@ -89,5 +132,5 @@ input[type="submit"] {
 }
 
 .water-drop-icon:hover {
-  color: var(--color-flo-300) !important;
+  color: var(--color-flo-800) !important;
 }

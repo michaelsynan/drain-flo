@@ -18,67 +18,65 @@ type Services = {
 const services: Services = {
   primaryCategory: 'plumbing',
   summary:
-    'Emergency plumbing services available 24/7 for urgent issues like leaks, clogs, and system failures.',
+    'Fast, professional drain services for clogs, backups, and routine maintenance.',
   items: [
     {
-      id: 'drainage-service',
-      title: 'Drainage Service',
-      description: 'Professional drainage services to keep your systems flowing smoothly.',
-      link: '/services/drainage-service',
+      id: 'drain-cleaning',
+      title: 'Drain Cleaning',
+      description: 'Thorough drain cleaning to restore flow and prevent recurring backups.',
+      link: '/services/drain-cleaning',
     },
     {
-      id: 'sewer-line-cleaning-repair',
-      title: 'Sewer Line Cleaning & Repair',
-      description:
-        'Comprehensive sewer line cleaning and repair services for homes and businesses.',
-      link: '/services/sewer-line-cleaning-repair',
+      id: 'clog-removal',
+      title: 'Clog Removal',
+      description: 'Targeted clog removal for sinks, tubs, showers, and floor drains.',
+      link: '/services/clog-removal',
     },
     {
-      id: 'drain-clogs',
-      title: 'Drain Clogs',
-      description:
-        'Expert solutions for stubborn drain clogs to restore proper flow.',
-      link: '/services/drain-clogs',
+      id: 'sewer-line-cleaning',
+      title: 'Sewer Line Cleaning',
+      description: 'Sewer line cleaning to clear buildup and help prevent blockages.',
+      link: '/services/sewer-line-cleaning',
     },
     {
-      id: 'toilet-repair',
-      title: 'Toilet Repair',
-      description: 'Reliable toilet repair services to fix leaks, clogs, and other issues.',
-      link: '/services/toilet-repair',
-    },
-    {
-      id: 'faucet-leaks',
-      title: 'Faucet Leaks',
-      description:
-        'Quick and efficient repairs for leaky faucets to prevent water waste.',
-      link: '/services/faucet-leaks',
+      id: 'emergency-drain-service',
+      title: 'Emergency Drain Service',
+      description: 'Rapid response for urgent drain issues—call anytime for help.',
+      link: '/services/emergency-drain-service',
     },
   ],
 }
 </script>
 
 <template>
-  <div class="px-6 py-10">
+  <div class="px-6 py-20 border-y border-2 border-stone-950 bg-drain-50/10">
     <div
       v-if="services && services.items && services.items.length"
       class="max-w-4xl mx-auto"
     >
-      <h2 class="text-2xl font-bold text-center mb-4">Our Services</h2>
-      <p class="text-center text-gray-600 mb-8">{{ services.summary }}</p>
-
+      <div class="mb-10">
+        <h2 class="text-2xl font-bold text-center mb-4">Our Services</h2>
+        <p class="text-center text-gray-600 mb-8 !text-xl">{{ services.summary }}</p>
+      </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div
+        <NuxtLink
           v-for="item in services.items"
           :key="item.id"
-          class="rounded-lg border border-flo-200 bg-white shadow-sm p-6 flex flex-col"
+          :to="item.link"
+          class="rounded-lg border border-flo-200 bg-drain-100 shadow-sm p-6 flex flex-col"
         >
           <h3 class="text-lg font-semibold mb-2">{{ item.title }}</h3>
           <p class="text-sm text-gray-700 mb-4">{{ item.description }}</p>
-          <NuxtLink
-            :to="item.link"
-            class="text-flo-600 underline mt-auto"
-          >Learn more</NuxtLink>
-        </div>
+          <span
+            class="mt-2 inline-flex w-fit items-center justify-center gap-2 rounded-full border-2 border-black bg-tertiary-500 px-4 py-2 text-sm font-bold text-black "
+          >
+            Learn more
+            <UIcon
+              name="i-mdi-arrow-right"
+              class="h-5 w-5"
+            />
+          </span>
+        </NuxtLink>
       </div>
     </div>
     <div

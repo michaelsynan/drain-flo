@@ -1,3 +1,0 @@
-<template>
-  drain cleaning
-</template>

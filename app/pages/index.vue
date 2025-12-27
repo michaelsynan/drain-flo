@@ -9,11 +9,13 @@
 
       <HomeHero />
       <HomeServices />
-      <SharedBlogList />
+
       <HomeAbout />
       <HomeReviews />
       <HomeCTA />
+
       <HomeMap />
+      <SharedBlogList />
     </main>
   </div>
 </template>

@@ -15,6 +15,8 @@ const slug = computed(() => {
 
 const service = computed(() => services.find((s) => s.slug === slug.value));
 
+const heroImage = computed(() => service.value?.image ?? "drain-flo.jpg");
+
 if (!service.value) {
   throw createError({ statusCode: 404, statusMessage: "Service not found" });
 }
@@ -27,7 +29,13 @@ useSeoMeta({
 
 <template>
   <ServicesWrapper>
-    <h1 class="text-3xl font-bold mb-4">{{ service!.title }}</h1>
+    <NuxtImg
+      :src="`/${heroImage}`"
+      :alt="service!.title"
+      class="mb-6 aspect-[16/9] w-full rounded-lg border-2 border-flo-200 object-cover"
+    />
+
+    <h1 class="text-3xl font-bold mb-4">{{ service!.title }} in Duryea & Across NEPA</h1>
 
     <p
       v-for="(paragraph, idx) in service!.body"

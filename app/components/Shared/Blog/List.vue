@@ -16,13 +16,13 @@ const { data: posts } = await useAsyncData('home-posts-list', () => {
     <UContainer>
       <div class="mb-12">
         <h2 class="text-2xl font-bold text-center">Check Out Our Latest Posts</h2>
-        <p class="text-center mb-8">Read tips and insights from our experts.</p>
+        <p class="text-center mb-8 !text-xl">Read tips and insights from our experts.</p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <div
           v-for="post in posts"
           :key="post.path"
-          class="card bg-flo-100"
+          class="card bg-flo-100 border-2 border-stone-800"
         >
           <NuxtLink
             :to="post.path"
@@ -46,7 +46,7 @@ const { data: posts } = await useAsyncData('home-posts-list', () => {
 
 .card {
 
-  border: 1px solid #e5e7eb;
+
   border-radius: 0.5rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s, box-shadow 0.2s;

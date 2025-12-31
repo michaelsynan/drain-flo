@@ -3,6 +3,18 @@ export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
   css: ["@/assets/css/main.css"],
+  app: {
+    pageTransition: { name: "fade", mode: "out-in" },
+    head: {
+      link: [
+        {
+          rel: "icon",
+          type: "image/x-icon",
+          href: "/favicon.ico?v=2",
+        },
+      ],
+    },
+  },
   ui: {
     colorMode: false,
     theme: {

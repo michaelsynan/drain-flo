@@ -6,6 +6,18 @@ import { locations } from "~/data/locations";
 
 const route = useRoute();
 
+function slugify(value: string) {
+  return value
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
+}
+
+function canonicalLocationSlug(cityName: string) {
+  return `drain-cleaning-in-${slugify(cityName)}`;
+}
+
 const slug = computed(() => {
   const param = route.params.slug;
   if (Array.isArray(param)) return param[0] ?? "";
@@ -13,7 +25,32 @@ const slug = computed(() => {
   return "";
 });
 
-const location = computed(() => locations.find((l) => l.slug === slug.value));
+const location = computed(() => {
+  const raw = slug.value;
+
+  if (!raw) return undefined;
+
+  const cityPart = raw.startsWith("drain-cleaning-in-")
+    ? raw.replace(/^drain-cleaning-in-/, "")
+    : raw;
+
+  return locations.find((l) => {
+    const byExistingSlug = l.slug === raw;
+    const byCanonical = canonicalLocationSlug(l.name) === raw;
+    const byCityOnly = slugify(l.name) === cityPart;
+    return byExistingSlug || byCanonical || byCityOnly;
+  });
+});
+
+if (location.value) {
+  const canonical = canonicalLocationSlug(location.value.name);
+  const param = route.params.slug;
+  const hasExtraSegments = Array.isArray(param) && param.length > 1;
+
+  if (slug.value !== canonical || hasExtraSegments) {
+    await navigateTo(`/locations/${canonical}`, { redirectCode: 301 });
+  }
+}
 
 if (!location.value) {
   throw createError({ statusCode: 404, statusMessage: "Location not found" });
@@ -28,7 +65,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <UContainer>
+  <UContainer class="max-w-4xl py-4">
     <div class="my-8">
       <h1>Drain Cleaning Service in {{ location!.name }}</h1>
 

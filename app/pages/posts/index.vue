@@ -11,10 +11,24 @@
         >
           <div class="rounded-lg border-2 border-stone-800 bg-flo-100 p-5">
             <div class="flex flex-col gap-2">
-              <p
-                v-if="post.date"
-                class="text-sm text-stone-900/70"
-              >{{ formatDate(post.date) }}</p>
+              <div class="flex items-center justify-between gap-4">
+                <p
+                  v-if="post.date"
+                  class="text-sm text-stone-900/70"
+                >{{ formatDate(post.date) }}</p>
+
+                <div
+                  v-if="post.tags?.length"
+                  class="flex flex-wrap justify-end gap-2"
+                >
+                  <span
+                    v-for="tag in post.tags"
+                    :key="tag"
+                    class="rounded-full px-3 py-1 text-xs font-mono"
+                    :class="isPostTag(tag) ? POST_TAG_CLASSES[tag] : 'border-2 border-stone-900 bg-flo-50 text-stone-900'"
+                  >{{ tag }}</span>
+                </div>
+              </div>
 
               <h2 class="text-xl font-semibold">{{ post.title }}</h2>
               <p class="text-stone-900/80">{{ post.description }}</p>
@@ -30,10 +44,12 @@
   setup
   lang="ts"
 >
+import { POST_TAG_CLASSES, isPostTag } from '@/data/postTags'
+
 const { data: posts } = await useAsyncData('posts-list', () => {
   return queryCollection('posts')
     .order('date', 'DESC')
-    .select('title', 'path', 'description', 'date')
+    .select('title', 'path', 'description', 'date', 'tags')
     .all()
 })
 

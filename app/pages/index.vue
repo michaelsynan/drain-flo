@@ -1,23 +1,22 @@
-<script
-  setup
-  lang="ts"
-></script>
-
 <template>
   <div>
     <main class="min-h-screen w-full">
-
       <HomeHero />
       <HomeServices />
-
       <HomeAbout />
       <HomeReviews />
-      <HomeCTA />
-
-      <HomeMap />
       <SharedBlogList />
+      <HomeMap />
     </main>
   </div>
 </template>
 
-<style scoped></style>
+<script
+  setup
+  lang="ts"
+>
+definePageMeta({
+  title: '#1 Drain Cleaning Service in Northeastern PA'
+})
+
+</script>

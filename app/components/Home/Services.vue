@@ -33,7 +33,7 @@ const items = computed<ServiceCardItem[]>(() => {
 </script>
 
 <template>
-  <div class="px-6 py-20 border-y border-2 border-stone-950 bg-drain-50/10">
+  <div class="px-6 py-20 border-b-2 border-stone-950 bg-drain-50/10">
     <div
       v-if="items.length"
       class="max-w-4xl mx-auto"

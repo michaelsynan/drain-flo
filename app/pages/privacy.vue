@@ -9,8 +9,8 @@ useSeoMeta({
 </script>
 
 <template>
-  <main class="min-h-screen w-full">
-    <section class="py-20 border-y-2 bg-flo-50">
+  <main class="min-h-screen w-full bg-flo-50">
+    <section class="py-20 ">
       <UContainer class="max-w-4xl">
         <h1 class="text-3xl font-bold">Privacy Policy</h1>
         <p class="mt-3 text-gray-700">
@@ -64,6 +64,16 @@ useSeoMeta({
               We may update this policy from time to time. Updates will be posted on this page.
             </p>
           </section>
+          <UButton
+            href="/"
+            variant="solid"
+            color="tertiary"
+            size="md"
+            class="text-stone-900"
+            icon="i-mdi-arrow-left"
+          >
+            Back Home
+          </UButton>
         </div>
       </UContainer>
     </section>

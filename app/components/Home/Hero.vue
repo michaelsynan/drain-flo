@@ -5,12 +5,12 @@
 
 <template>
   <div
-    class="hero-pattern text-8xl font-bold text-center pt-16 h-1/2 items-center flex justify-center flex-col gap-6 border-b-2 py-24 bg-flo-200"
+    class="hero-pattern text-8xl font-bold text-center pt-16 h-1/2 items-center flex justify-center flex-col gap-6 border-b-2 py-24 bg-flo-200 border-stone-900 px-4"
   >
     <Nuxt-Img
       src="/drain-flo.jpg"
       alt="Drain-Flo"
-      class="max-w-full rounded-lg border-2 border-flo-500 w-64 md:w-96"
+      class="max-w-full rounded-lg border-2 border-stone-900 w-full md:w-96"
     />
     <div>
       <h1 class="text-stone-950">Duryea Drain Cleaning Services</h1>
@@ -19,9 +19,10 @@
         Northeastern, PA</p>
     </div>
     <UButton
-      class="text-stone-950"
+      class="text-stone-950 w-full md:w-auto justify-center text-center"
       size="xl"
       color="tertiary"
+      icon="i-mdi-phone"
     >Call 222-222-2222</UButton>
 
   </div>

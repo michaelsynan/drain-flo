@@ -11,40 +11,54 @@ useSeoMeta({
 </script>
 
 <template>
-  <UContainer>
+  <UContainer class="max-w-4xl m-auto py-10">
     <div class="my-8">
-      <h1>Services</h1>
-      <p class="mt-2">
-        Fast, professional drain services for clogs, backups, and routine maintenance.
-      </p>
+      <div class="pb-6">
+        <h1>Our Drain Cleaning and Clog Removal Services</h1>
+        <p class="mt-2">
+          Fast, professional drain services for clogs, backups, and routine maintenance.
+        </p>
+      </div>
 
-      <div class="mt-6 space-y-4">
+      <div class="mt-6 space-y-8">
         <NuxtLink
           v-for="item in services"
           :key="item.slug"
           :to="`/services/${item.slug}`"
-          class="group flex w-full gap-4 rounded-lg border-2 border-flo-200 bg-white shadow-sm overflow-hidden hover:bg-flo-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-flo-400"
+          class="group flex w-full flex-col items-stretch gap-0 overflow-hidden rounded-lg border-2 border-stone-900 bg-flo-50 shadow-sm hover:bg-flo-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-flo-400 sm:flex-row sm:gap-4"
         >
-          <NuxtImg
-            :src="`/${item.image ?? 'drain-flo.jpg'}`"
-            :alt="item.title"
-            class="h-full w-28 shrink-0 object-cover sm:w-40"
-          />
+          <div class="relative h-48 w-full shrink-0 overflow-hidden sm:h-auto sm:w-[12rem] sm:self-stretch">
+            <NuxtImg
+              :src="`/${item.image ?? 'drain-flo.jpg'}`"
+              :alt="item.title"
+              fit="cover"
+              class="block h-full w-full object-cover object-top sm:absolute sm:inset-0"
+            />
+          </div>
 
           <div class="flex flex-1 flex-col p-4 sm:p-6">
             <h2 class="text-lg font-semibold mb-1">{{ item.title }}</h2>
             <p class="text-sm text-gray-700">{{ item.description }}</p>
 
-            <span class="mt-3 text-flo-600 underline">
+            <UButton
+              class="mt-4 w-fit text-stone-900"
+              color="tertiary"
+              size="md"
+              variant="solid"
+              as="span"
+            >
               Learn more
-            </span>
+              <UIcon
+                name="i-mdi-arrow-right"
+                class="h-5 w-5"
+                aria-hidden="true"
+              />
+            </UButton>
           </div>
         </NuxtLink>
       </div>
 
-      <p class="mt-8 text-gray-700">
-        Need something else? Call us.
-      </p>
+
     </div>
   </UContainer>
 </template>

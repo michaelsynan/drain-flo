@@ -50,17 +50,31 @@ onMounted(async () => {
     <section class="grid gap-8 lg:grid-cols-2 py-20">
       <div>
         <h2 class="text-2xl font-bold">Contact</h2>
-        <p class="mt-4 text-lg leading-relaxed">
+        <p>Call anytime. 24/7 emergency drain cleaning service.</p>
+        <div class="mt-4 flex flex-col gap-2 !text-base leading-relaxed">
           <a
-            class="underline"
+            class="inline-flex items-center gap-2 text-flo-700 hover:underline"
             :href="`tel:${contactPhoneHref}`"
-          >{{ contactPhoneDisplay }}</a>
-          <span class="mx-2">•</span>
+          >
+            <UIcon
+              name="i-mdi-phone"
+              class="h-5 w-5"
+              aria-hidden="true"
+            />
+            {{ contactPhoneDisplay }}
+          </a>
           <a
-            class="underline"
+            class="inline-flex items-center gap-2 text-flo-600 hover:underline"
             :href="`mailto:${contactEmail}`"
-          >{{ contactEmail }}</a>
-        </p>
+          >
+            <UIcon
+              name="i-mdi-email"
+              class="h-5 w-5"
+              aria-hidden="true"
+            />
+            {{ contactEmail }}
+          </a>
+        </div>
 
         <h2 class="mt-10 text-3xl font-bold">Locations We Serve</h2>
         <p class="mt-4 text-lg leading-relaxed">
@@ -70,7 +84,7 @@ onMounted(async () => {
             :key="loc.slug"
           >
             <NuxtLink
-              class="underline"
+              class="text-flo-700 hover:underline"
               :to="`/locations/${loc.slug}`"
             >{{ loc.name }}</NuxtLink>
             <span v-if="locations.length === 1">.</span>
@@ -86,14 +100,24 @@ onMounted(async () => {
           </template>
         </p>
 
-        <p class="mt-4 text-lg leading-relaxed">
-          <a
-            class="underline"
+        <div class="mt-12">
+          <UButton
+            class="text-stone-900 w-full md:w-auto justify-center text-center"
+            color="tertiary"
+            size="lg"
+            as="a"
             href="https://share.google/yjgVYcaz8l32VUyh4"
             target="_blank"
             rel="noopener noreferrer"
-          >Visit Our Google Business Profile Page</a>
-        </p>
+          >
+            Visit Our Google Business Profile Page
+            <UIcon
+              name="i-mdi-arrow-right"
+              class="h-5 w-5"
+              aria-hidden="true"
+            />
+          </UButton>
+        </div>
       </div>
 
       <div>

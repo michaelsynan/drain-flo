@@ -1,23 +1,41 @@
 <script
   setup
   lang="ts"
-></script>
+>
+const phone = "2222-222-2222"
+const phoneHref = "tel:2222222222"
+</script>
 
 <template>
-  <div class="hero-pattern p-22 border-2 flex flex-col items-center gap-6 px-6 bg-primary-200">
+  <div class="hero-pattern p-22 border-b-2 flex flex-col items-center gap-6 px-6 bg-primary-200">
     <UContainer class="flex flex-col items-center gap-10">
       <nuxt-img
         src="/drain-flo-logo-fixed.png"
         alt="Drain-Flo Logo"
-        class="max-w-[400px] object-fill mx-auto"
+        class="w-full max-w-[260px] sm:max-w-[340px] md:max-w-[400px] h-auto object-contain mx-auto"
       />
       <div class="text-center text-stone-950 space-y-4 max-w-4xl flex flex-col gap-2 mt-6">
         <h2>Sewer & Pipe Cleaning Professionals</h2>
-        <div class="text-xl tracking-normal max-w-3xlx">Drain-Flo is a family run business based in Duryea, PA providing
+        <div class="text-xl text-stone-800 max-w-3xl leading-normal">Drain-Flo is a family run business based in
+          Duryea,
+          PA providing
           trusted
           sewer and pipe cleaning services
           to
           the community for over a decade.</div>
+
+        <div class="pt-4 flex justify-center">
+          <UButton
+            class="text-stone-900 w-full md:w-auto justify-center text-center"
+            color="tertiary"
+            size="lg"
+            icon="i-mdi-phone"
+            as="a"
+            :href="phoneHref"
+          >
+            Call {{ phone }}
+          </UButton>
+        </div>
       </div>
     </UContainer>
   </div>

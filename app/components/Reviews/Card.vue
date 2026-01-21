@@ -46,7 +46,7 @@ const stars = computed(() => {
             >{{ initials }}</span>
           </div>
 
-          <p class="text-lg font-bold">
+          <p class="text-lg !font-bold">
             {{ review.name }}
             <span
               v-if="review.location"

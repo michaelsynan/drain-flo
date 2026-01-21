@@ -9,7 +9,7 @@
       <img
         src="/drain-flo.jpg"
         alt="Drain-Flo"
-        class="w-full md:w-1/3 rounded-lg border-2 border-flo-200"
+        class="w-full md:w-1/3 rounded-lg border-2 border-stone-900"
       />
 
       <div class="flex-1">

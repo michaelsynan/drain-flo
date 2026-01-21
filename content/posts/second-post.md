@@ -2,13 +2,14 @@
 title: "Sewer Backup in Pittston? What to Do While You Wait for Help"
 description: "Facing a sewer backup or major clog in the Pittston, PA area? Here are the immediate steps to take to minimize damage before your emergency sewer guy arrives."
 date: "2025-12-31"
+tags: ["tips"]
 ---
 
-## A Homeowner's Worst Nightmare: The Sewer Backup
+## Properly Dealing With a Sewer Backup
 
-There's nothing more stressful than a sewer backup. The mess, the smell, and the potential for expensive water damage can be overwhelming. If you're in Pittston, Duryea, or anywhere in NEPA and facing this plumbing emergency, the first step is to call a professional.
+Sewer backups are stressful: The mess, the smell, and the potential for expensive water damage can be overwhelming. If you're in Pittston, Duryea, or anywhere in NEPA and facing this plumbing emergency, the first step is to call a professional.
 
-But what should you do in the 30-60 minutes it takes for the emergency "sewer guy" to arrive? Taking these immediate steps can save you thousands in damages.
+But what should you do in the 30-60 minutes it takes for your emergency "sewer guy" to arrive? Taking these immediate steps can potentially save you thousands in damages.
 
 ### Step 1: Stop Using Water Immediately
 
@@ -16,15 +17,15 @@ This is the most critical step. Do not flush toilets, run sinks, or start the di
 
 ### Step 2: Shut Off the Main Water Valve (If Necessary)
 
-If the backup is severe and water is continuously flowing, you may need to shut off the main water supply to your house. This is usually located in the basement or a utility closet, near the water meter. Turn the valve clockwise until it's snug.
+If the backup is severe and water is continuously flowing, you may need to shut off the main water supply to your house. This is usually located in the basement or a utility closet, near the water meter. Turn the valve clockwise until it's shut.
 
 ### Step 3: Do NOT Use Chemical Drain Cleaners
 
-When facing a total blockage, pouring chemicals down the drain is one of the worst things you can do. They are ineffective on major clogs and create a hazardous, toxic situation for the professional who has to clear the line. It also won't solve the problem and just wastes precious time.
+When facing a total blockage, pouring chemicals down the drain is one of the worst things you can do. They are ineffective on major clogs and create a hazardous, toxic situation for the professional who has to fix the line. It also won't solve the problem and just wastes time and money.
 
 ### Step 4: Move Valuables to a Safe Area
 
-If the backup is happening in your basement, quickly move any valuable items—photos, electronics, furniture—off the floor and to a dry, safe location.
+If the backup is happening in your basement, quickly move any valuable items such as photos, electronics, and furniture up to a dry area.
 
 ### Step 5: Call Your Local Emergency Drain Service
 

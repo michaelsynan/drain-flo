@@ -11,7 +11,7 @@ const loopReviews = computed(() => {
 </script>
 
 <template>
-  <section class="py-20 border-y-2 bg-flo-50">
+  <section class="py-20 border-b-2 border-stone-900 bg-drain-50/10">
 
     <div class="mb-12">
       <h2 class="text-2xl font-bold text-center">What Customers Are Saying</h2>

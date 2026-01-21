@@ -3,18 +3,25 @@ export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
   css: ["@/assets/css/main.css"],
+  site: {
+    url: "https://drain-flo.com",
+    name: "Drain-Flo",
+    description:
+      "Drain-Flo provides professional drain cleaning, clog removal, sewer line cleaning, emergency drain service, and sewer excavation across Northeastern PA.",
+    defaultLocale: "en",
+  },
   ssr: false,
   nitro: {
-    preset: "static",
+    preset: process.dev ? "node-server" : "static",
   },
   app: {
-    pageTransition: { name: "fade", mode: "out-in" },
+    pageTransition: { name: "page", mode: "out-in" },
     head: {
       link: [
         {
           rel: "icon",
           type: "image/x-icon",
-          href: "/favicon.ico?v=2",
+          href: "/favicon.ico?v=3",
         },
       ],
     },
@@ -26,5 +33,11 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ["@nuxt/content", "@nuxt/eslint", "@nuxt/image", "@nuxt/ui"],
+  modules: [
+    "@nuxt/content",
+    "@nuxt/eslint",
+    "@nuxt/image",
+    "@nuxt/ui",
+    "@nuxtjs/seo",
+  ],
 });

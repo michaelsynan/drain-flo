@@ -2,8 +2,8 @@
   setup
   lang="ts"
 >
-const phone = "2222-222-2222"
-const phoneHref = "tel:2222222222"
+const phone = "570-357-4228"
+const phoneHref = "tel:5703574228"
 </script>
 
 <template>

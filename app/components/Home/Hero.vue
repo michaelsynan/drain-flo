@@ -23,7 +23,7 @@
       size="xl"
       color="tertiary"
       icon="i-mdi-phone"
-    >Call 222-222-2222</UButton>
+    >Call 570-357-4228</UButton>
 
   </div>
 </template>

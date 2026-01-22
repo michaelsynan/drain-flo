@@ -150,7 +150,7 @@ onUnmounted(() => {
           :icon="isMobile ? undefined : 'i-mdi-phone'"
           as="NuxtLink"
           to="/"
-        >{{ isMobile ? 'CALL' : 'Call 2222-222-2222' }}</UButton>
+        >{{ isMobile ? 'CALL' : 'Call 570-357-4228' }}</UButton>
       </div>
     </div>
 

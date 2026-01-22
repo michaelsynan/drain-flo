@@ -8,8 +8,8 @@ import { locations } from "~/data/locations";
 // import type { Map } from 'leaflet'
 type Map = any;
 
-const contactPhoneDisplay = "222-222-2222";
-const contactPhoneHref = "2222222222";
+const contactPhoneDisplay = "570-357-4228";
+const contactPhoneHref = "5703574228";
 const contactEmail = "hello@drain-flo.com";
 
 const mapContainer = ref<HTMLElement>();

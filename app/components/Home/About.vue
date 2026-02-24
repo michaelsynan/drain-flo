@@ -9,7 +9,7 @@ const phoneHref = "tel:5703574228"
 <template>
   <div class="hero-pattern p-22 border-b-2 flex flex-col items-center gap-6 px-6 bg-primary-200">
     <UContainer class="flex flex-col items-center gap-10">
-      <nuxt-img
+      <NuxtImg
         src="/drain-flo-logo-fixed.png"
         alt="Drain-Flo Logo"
         class="w-full max-w-[260px] sm:max-w-[340px] md:max-w-[400px] h-auto object-contain mx-auto"

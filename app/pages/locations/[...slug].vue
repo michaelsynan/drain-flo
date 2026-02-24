@@ -4,6 +4,10 @@
 >
 import { locations } from "~/data/locations";
 
+definePageMeta({
+  title: 'Location'
+})
+
 const route = useRoute();
 
 function slugify(value: string) {
@@ -57,7 +61,7 @@ if (!location.value) {
 }
 
 useSeoMeta({
-  title: () => `Drain Cleaning Service in ${location.value!.name} | Drain-Flo`,
+  title: () => `Drain Cleaning Service in ${location.value!.name}`,
   description: () =>
     location.value!.seoDescription ||
     `Need drain cleaning in ${location.value!.name

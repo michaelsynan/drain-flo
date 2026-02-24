@@ -18,6 +18,24 @@ const route = useRoute()
 const { data: page } = await useAsyncData(route.path, () => {
   return queryCollection('posts').path(route.path).first()
 })
+
+definePageMeta({
+  title: 'Blog Post'
+})
+
+const seoTitle = computed(() => page.value?.title || 'Blog Post')
+const seoDescription = computed(
+  () =>
+    page.value?.description ||
+    'Drain cleaning tips, clog prevention advice, and updates for homeowners in Northeastern PA.'
+)
+
+useSeoMeta({
+  title: seoTitle,
+  description: seoDescription,
+  ogTitle: seoTitle,
+  ogDescription: seoDescription,
+})
 </script>
 
 <template>

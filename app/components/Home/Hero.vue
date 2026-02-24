@@ -7,10 +7,10 @@
   <div
     class="hero-pattern text-8xl font-bold text-center pt-16 h-1/2 items-center flex justify-center flex-col gap-6 border-b-2 py-24 bg-flo-200 border-stone-900 px-4"
   >
-    <Nuxt-Img
+    <NuxtImg
       src="/drain-flo.jpg"
       alt="Drain-Flo"
-      class="max-w-full rounded-lg border-2 border-stone-900 w-full md:w-96"
+      class="max-w-full rounded-lg border-2 border-stone-900 w-full md:w-[32rem] lg:w-[36rem]"
     />
     <div>
       <h1 class="text-stone-950">Duryea Drain Cleaning Services</h1>
@@ -23,6 +23,8 @@
       size="xl"
       color="tertiary"
       icon="i-mdi-phone"
+      as="a"
+      href="tel:5703574228"
     >Call 570-357-4228</UButton>
 
   </div>

@@ -5,8 +5,9 @@
 import { services } from "~/data/services";
 
 useSeoMeta({
-  title: 'Services | Drain-Flo',
-  description: 'Drain cleaning, clog removal, sewer line cleaning, and emergency drain service.',
+  title: 'Drain Cleaning & Clog Removal Services',
+  description:
+    'Professional drain cleaning in Northeastern PA. Clog removal, sewer line cleaning, and fast emergency drain service for homes and businesses.',
 })
 </script>
 

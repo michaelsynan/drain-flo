@@ -1,5 +1,5 @@
 <template>
-  <UContainer class="max-w-4xl py-10 min-h-screen">
+  <UContainer class="max-w-4xl py-10">
     <div class="flex flex-col gap-6">
       <h1>Draining & Sewer Cleaning Blog</h1>
       <div class="flex flex-col gap-4">
@@ -45,6 +45,16 @@
   lang="ts"
 >
 import { POST_TAG_CLASSES, isPostTag } from '@/data/postTags'
+
+definePageMeta({
+  title: 'Blog'
+})
+
+useSeoMeta({
+  title: 'Drain Cleaning Tips & Updates',
+  description:
+    'Helpful drain cleaning tips, clog prevention advice, and updates from Drain-Flo serving Northeastern PA.',
+})
 
 const { data: posts } = await useAsyncData('posts-list', () => {
   return queryCollection('posts')

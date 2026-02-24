@@ -131,7 +131,7 @@ onUnmounted(() => {
       <!-- Center: Logo / Site name -->
       <div class="justify-self-center">
         <NuxtLink to="/">
-          <img
+          <NuxtImg
             v-if="siteLogo"
             :src="siteLogo"
             :alt="siteName"
@@ -148,8 +148,8 @@ onUnmounted(() => {
           color="tertiary"
           size="md"
           :icon="isMobile ? undefined : 'i-mdi-phone'"
-          as="NuxtLink"
-          to="/"
+          as="a"
+          href="tel:5703574228"
         >{{ isMobile ? 'CALL' : 'Call 570-357-4228' }}</UButton>
       </div>
     </div>

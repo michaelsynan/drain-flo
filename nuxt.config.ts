@@ -40,4 +40,7 @@ export default defineNuxtConfig({
     "@nuxt/ui",
     "@nuxtjs/seo",
   ],
+  image: {
+    provider: "none",
+  },
 });

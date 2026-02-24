@@ -4,10 +4,14 @@
 >
 import { locations } from "~/data/locations";
 
+definePageMeta({
+  title: 'Locations'
+})
+
 useSeoMeta({
-  title: "Locations | Drain Cleaning Service",
+  title: 'Drain Cleaning Locations in Northeastern PA',
   description:
-    "Browse our service locations for drain cleaning, clog removal, and sewer line cleaning.",
+    'Browse our service locations across Northeastern PA for drain cleaning, clog removal, and sewer line cleaning. Find your city and get fast help.',
 });
 </script>
 

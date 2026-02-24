@@ -33,7 +33,7 @@ const stars = computed(() => {
             class="h-10 w-10 rounded-full border-2 border-stone-900 bg-white overflow-hidden flex items-center justify-center shrink-0"
             aria-hidden="true"
           >
-            <img
+            <NuxtImg
               v-if="review.imageUrl"
               :src="review.imageUrl"
               :alt="review.name"

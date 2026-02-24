@@ -9,8 +9,8 @@ import { locations } from "~/data/locations";
 type Map = any;
 
 const contactPhoneDisplay = "570-357-4228";
-const contactPhoneHref = "5703574228";
-const contactEmail = "hello@drain-flo.com";
+const contactPhoneHref = "tel:5703574228";
+const contactEmail = "gubitoso114@gmail.com";
 
 const mapContainer = ref<HTMLElement>();
 let map: Map | null = null;

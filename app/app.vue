@@ -1,15 +1,17 @@
 <template>
   <UApp>
-    <NuxtRouteAnnouncer />
-    <header>
-      <SharedNav />
-    </header>
-    <main>
-      <NuxtPage />
-    </main>
-    <footer>
-      <SharedFooter />
-    </footer>
+    <div class="min-h-screen flex flex-col">
+      <NuxtRouteAnnouncer />
+      <header>
+        <SharedNav />
+      </header>
+      <main class="flex-1 flex flex-col">
+        <NuxtPage />
+      </main>
+      <footer>
+        <SharedFooter />
+      </footer>
+    </div>
   </UApp>
 </template>
 
